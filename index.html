@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <link rel="stylesheet" href="./public/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Hangman Game</title>
+</head>
+
+<body>
+
+
+    <div class="row d-flex justify-content-center mt-5">
+        <!-- ? guide du jeu -->
+        <div class=" col-md-10 col-lg-3 guide position-relative p-4">
+            <h3 class=" text-center">hangman Game Guide</h3>
+
+            <p class=" text-center">Two friends sit together, one is the word chooser and the other is the guesser.</p>
+
+            <p><b>The word chooser : </b> types a word into the input field and clicks the "Go" button. The length of
+                the word is
+                then displayed.</p>
+            <p><b>The guesser :</b> starts with 7 attempts, he clicks on the letter buttons to guess the word.
+                If the guessed letter is correct, it fills in the corresponding blank spaces in the word.
+                If it's not, the remaining attempts decreases.
+            </p>
+
+            <p class="text-center">Enjoy the challenge of guessing words and avoiding the hangman! <br><i class="fa-regular fa-face-grin-wink fs-2 mt-2 " style="color: rgba(33, 33, 184, 0.87);"></i></p>
+            
+
+        </div>
+        <!-- ? the play Ground -->
+        <div class="col-md-5 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+
+            <!-- todo table des lettres => tablelength==word.length / une case foreach lettre -->
+            <div id="guess" class="d-flex flex-wrap justify-content-center">
+            </div>
+
+            <!-- todo player1 types a word -->
+            <div class="mb-4 d-flex justify-content-center">
+                <input class="p-1 me-2" type="text" placeholder="Your word">
+                <button id="go" class="btn btn-dark">GO!</button>
+            </div>
+
+            <!-- todo nombre des essais -->
+            <div class="tries mb-2 fw-bold">
+            </div>
+
+            <!-- todo les lettres btns -->
+            <div id="divBtns" class=" d-flex flex-wrap gap-2 justify-content-center container border border-1">
+                <button class="btn btn-outline-dark fs-4">A</button>
+                <button class="btn btn-outline-dark fs-4">B</button>
+                <button class="btn btn-outline-dark fs-4">C</button>
+                <button class="btn btn-outline-dark fs-4">D</button>
+                <button class="btn btn-outline-dark fs-4">E</button>
+                <button class="btn btn-outline-dark fs-4">F</button>
+                <button class="btn btn-outline-dark fs-4">G</button>
+                <button class="btn btn-outline-dark fs-4">H</button>
+                <button class="btn btn-outline-dark fs-4">I</button>
+                <button class="btn btn-outline-dark fs-4">J</button>
+                <button class="btn btn-outline-dark fs-4">K</button>
+                <button class="btn btn-outline-dark fs-4">L</button>
+                <button class="btn btn-outline-dark fs-4">M</button>
+                <button class="btn btn-outline-dark fs-4">N</button>
+                <button class="btn btn-outline-dark fs-4">O</button>
+                <button class="btn btn-outline-dark fs-4">P</button>
+                <button class="btn btn-outline-dark fs-4">Q</button>
+                <button class="btn btn-outline-dark fs-4">R</button>
+                <button class="btn btn-outline-dark fs-4">S</button>
+                <button class="btn btn-outline-dark fs-4">T</button>
+                <button class="btn btn-outline-dark fs-4">U</button>
+                <button class="btn btn-outline-dark fs-4">V</button>
+                <button class="btn btn-outline-dark fs-4">W</button>
+                <button class="btn btn-outline-dark fs-4">X</button>
+                <button class="btn btn-outline-dark fs-4">Y</button>
+                <button class="btn btn-outline-dark fs-4">Z</button>
+            </div>
+
+        </div>
+
+        <!-- ? change images after every mistake 'til death -->
+        <div class="col-md-5 col-lg-3 div_pics">
+            <img class="" src="./public/images/miss0.png" alt="start">
+            <img class="d-none" src="./public/images/miss1.png" alt="mis_1">
+            <img class="d-none" src="./public/images/miss2.png" alt="mis_2">
+            <img class="d-none" src="./public/images/miss3.png" alt="mis_3">
+            <img class="d-none" src="./public/images/miss4.png" alt="mis_4">
+            <img class="d-none" src="./public/images/miss5.png" alt="mis_5">
+            <img class="d-none" src="./public/images/miss6.png" alt="mis_6">
+            <img class="d-none" src="./public/images/missDead.png" alt="mis_die">
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0">
+        <img src="./public/images/emmylogo.png" alt="mytrace" width="50px">
+    </div>
+
+    <script type="module" src="./public/js/app.js"></script>
+</body>
+
+</html>
