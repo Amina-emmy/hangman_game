@@ -11,7 +11,7 @@ Welcome to the Hangman game! Here's a guide to help you get started:
 - **Two Player Setup**: Sit together with a friend. One player will be the word chooser, and the other will be the guesser.
 
 - **Word Chooser's Role**: 
-  - Type a word into the input field.
+  - Type a word into the input field using the keyboard.
   - Click the "Go" button to submit the word.
   - The length of the word will be displayed on the screen.
 
