@@ -3,6 +3,7 @@
 # Hangman Game Guide
 
 Link => https://amina-emmy.github.io/hangman_game/
+
 Welcome to the Hangman game! Here's a guide to help you get started:
 
 ## How to Play
