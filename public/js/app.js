@@ -22,13 +22,13 @@ function isLetter(str) {
     return str.length === 1 && str.match(/[a-z]/i);
 };
 
- //! Event listener for key presses in the input field
- input.addEventListener('keypress', function(event) {
+//! Event listener for key presses in the input field
+input.addEventListener('keypress', function (event) {
     const key = event.key;
     if (!isLetter(key)) {
-      event.preventDefault(); // Prevent entering non-letter characters
+        event.preventDefault(); // Prevent entering non-letter characters
     }
-  });
+});
 
 //^ game concept
 const guessWord = (word) => {
