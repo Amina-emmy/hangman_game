@@ -113,6 +113,8 @@ const guessWord = (word) => {
 go.addEventListener("click", () => {
     input.classList.add("d-none");
     go.classList.add("d-none");
+    div_btns.classList.remove("d-none");
+    div_btns.classList.add("d-flex");
     input.value = input.value.trim();
     guessWord(input.value);
     input.value = "";
