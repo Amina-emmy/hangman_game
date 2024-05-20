@@ -125,6 +125,8 @@ input.addEventListener("keyup", (event) => {
     if (event.key == "Enter") {
         input.classList.add("d-none");
         go.classList.add("d-none");
+        div_btns.classList.remove("d-none");
+        div_btns.classList.add("d-flex");
         input.value = input.value.trim();
         guessWord(input.value);
         input.value = "";
