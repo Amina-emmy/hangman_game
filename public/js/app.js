@@ -100,7 +100,7 @@ const guessWord = (word) => {
             }
             if (found == getdivChar.length) {
                 setTimeout(() => {
-                    alert("WINER");
+                    alert("WINNER");
                     location.reload();
                 }, 300);
             }
